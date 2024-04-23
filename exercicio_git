@@ -1,0 +1,64 @@
+PS C:\Users\D3ish>cd ./Documents
+PS C:\Users\D3ish\documents> mkdir git
+PS C:\Users\D3ish\documents> cd ./git
+
+PS C:\Users\D3ish\documents\git> git init
+Reinitialized existing Git repository in C:/Users/D3ish/Documents/git/.git/
+PS C:\Users\D3ish\documents\git> echo "testando" > teste.txt
+PS C:\Users\D3ish\documents\git> cat ./teste.txt
+testando
+PS C:\Users\D3ish\documents\git> git config --global user.name "Richard Santos"
+PS C:\Users\D3ish\documents\git> git config --global user.email "exemplo@gmail.com"
+PS C:\Users\D3ish\documents\git> git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        teste.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+PS C:\Users\D3ish\documents\git> git add .
+PS C:\Users\D3ish\documents\git> git commit -am "estou testando"
+[main (root-commit) f918cee] estou testando
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 teste.txt
+PS C:\Users\D3ish\documents\git> git log
+commit f918cee132627534044d248ecbff9a35c8238553 (HEAD -> main)
+Author: Richard Santos <exemplo@gmail.com>
+Date:   Tue Apr 23 15:46:32 2024 -0300
+
+    estou testando
+PS C:\Users\D3ish\documents\git> git log --stat
+commit f918cee132627534044d248ecbff9a35c8238553 (HEAD -> main)
+Author: Richard Santos <exemplo@gmail.com>
+Date:   Tue Apr 23 15:46:32 2024 -0300
+
+    estou testando
+
+ teste.txt | Bin 0 -> 22 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\D3ish\documents\git> gitbranch
+gitbranch : O termo 'gitbranch' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável.
+Verifique a grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+No linha:1 caractere:1
++ gitbranch
++ ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (gitbranch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\D3ish\documents\git> git branch
+* main
+PS C:\Users\D3ish\documents\git> git branch exercicio_git
+PS C:\Users\D3ish\documents\git> git branch
+  exercicio_git
+* main
+PS C:\Users\D3ish\documents\git> git checkout exercicio_git
+Switched to branch 'exercicio_git'
+PS C:\Users\D3ish\documents\git> echo "Richard Antonio dos Santos"
+Richard Antonio dos Santos
+PS C:\Users\D3ish\documents\git> git status
+On branch exercicio_git
+nothing to commit, working tree clean
